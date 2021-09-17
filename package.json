@@ -1,0 +1,16 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server-dep": "cd api && yarn",
+    "client-dep": "cd client && yarn",
+    "install-dep": "yarn server-dep && yarn client-dep",
+    "server": "cd api && yarn dev",
+    "client": "cd client && yarn start",
+    "watch": "yarn client & yarn server",
+    "build-client": "cd client && yarn build",
+    "deploy": "yarn build-client && yarn server"
+  }
+}
