@@ -11,6 +11,6 @@
     "client": "cd client && yarn start",
     "watch": "yarn client & yarn server",
     "build-client": "cd client && yarn build",
-    "deploy": "yarn build-client && yarn server"
+    "deploy": "yarn build-client && cd api && yarn start"
   }
 }
