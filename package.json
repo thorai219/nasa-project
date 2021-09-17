@@ -7,10 +7,11 @@
     "server-dep": "cd api && yarn",
     "client-dep": "cd client && yarn",
     "install-dep": "yarn server-dep && yarn client-dep",
-    "server": "cd api && yarn dev",
-    "client": "cd client && yarn start",
+    "server": "npm run dev --prefix api",
+    "client": "npm run start --prefix client",
     "watch": "yarn client & yarn server",
-    "build-client": "cd client && yarn build",
-    "deploy": "yarn build-client && cd api && yarn start"
+    "deploy": "npm run build --prefix client && npm run start --prefix api",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix api",
+    "test": "npm run test --prefix api && npm test --prefix client"
   }
 }
